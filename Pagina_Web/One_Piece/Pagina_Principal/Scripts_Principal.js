@@ -1,7 +1,7 @@
-const preview = document.getElementById("imagen_oculta");
+let preview = document.getElementById("imagen_oculta");
 document.querySelectorAll(".lider").forEach(function(link) {
     link.addEventListener("mouseenter", function() {
-        const imgSrc = link.getAttribute("data-img");
+        let imgSrc = link.getAttribute("data-img");
         if (imgSrc) {
             preview.innerHTML = `<img src="${imgSrc}">`;
         preview.style.display = "block";

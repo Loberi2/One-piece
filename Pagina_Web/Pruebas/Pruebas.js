@@ -18,15 +18,19 @@ let impar = document.getElementById("impar");
 
 botonpar.addEventListener("click", function() { 
     let numero = document.getElementById("numero").value;
-    if (numero % 2 == 0) {
-        let numero = document.getElementById("numero").value;
-        par.classList.remove("ocultar");
-        impar.classList.add("ocultar");
+    if (numero == "") {
+        par.classList.add("ocultar");
+        impar.classList.add("ocultar")
+    }   
+    else if (numero % 2 == 0) {
+            par.classList.remove("ocultar");
+            impar.classList.add("ocultar");
     }
     else {
-        impar.classList.remove("ocultar");
-        par.classList.add("ocultar");   
+            impar.classList.remove("ocultar");
+            par.classList.add("ocultar");   
     }
+
 });   
 
 //Detectar numero mayor o menor
@@ -93,7 +97,7 @@ document.querySelectorAll(".hover-img").forEach(link => {
     });
 
 });
-
+// CalcularS
 function calcular(idNum1, idNum2, idResultado, operacion) {
     let num1 = Number(document.getElementById(idNum1).value);
     let num2 = Number(document.getElementById(idNum2).value);
@@ -120,16 +124,21 @@ document.getElementById("dividir").addEventListener("click", function(){
     calcular("num/1", "num/2", "igual/1", "dividir");
 });
 //Conversor de valores
-function celsius(fahrenheit) {
+    function celsius(fahrenheit) {
     return (5/9) * (fahrenheit-32);
-}
+    }
+
     let conversor = document.getElementById("convertirTemp");
-    conversor.addEventListener("click",function(){
+    function CalcularResultado() {
          let fahrenheit = document.getElementById("temperaturaF").value;
          let resultado = celsius(fahrenheit);
          if (resultado % 1 !== 0) {
              resultado = resultado.toFixed(2);}
-             document.getElementById("temperaturaC").innerHTML = "La temperatura en C es " + resultado;
-    })
+             return resultado
+           
+    };
+    function mostrarResultado() {
+        document.getElementById("temperaturaC").innerHTML = "La temperatura en C es " + CalcularResultado();
+    }
 
    

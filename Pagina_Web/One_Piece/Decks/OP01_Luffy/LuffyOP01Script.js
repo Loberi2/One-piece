@@ -33,6 +33,8 @@ const generarbtn = document.getElementById("generar");
 generarbtn.addEventListener("click", function() {
     let lista = document.getElementById("luffyop01");
     lista.classList.add("revelar");
+     let lider = document.getElementById("lider");
+        lider.classList.add("revelar");
     generarbtn.classList.add("ocultar");
     let copiar = document.getElementById("CopiarLuffyDeck");
     copiar.classList.add("revelar");

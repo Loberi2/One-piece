@@ -1,4 +1,4 @@
-let titulo = "OP01 Zoro";
+
 let OP01_ZoroDeck = [
 "1xOP01-001",
 "4xOP01-016",
@@ -18,18 +18,19 @@ let OP01_ZoroDeck = [
 "2xOP01-026",
 ]
 
-let html = `<h2>${titulo}</h2><ul>`;
-for (const x of OP01_ZoroDeck) {
-    html += `<li>${x}</li>`;
+let text = "";
+for (let i = 0; i < OP01_ZoroDeck.length; i++) {
+    text += OP01_ZoroDeck[i] + "<br>";
 }
-html += `</ul>`;
-document.getElementById("OP01_Zoro_Deck").innerHTML = html;
+document.getElementById("OP01_Zoro_Deck").innerHTML = text;
 
 //Enseñar Deck y Boton
 const generardeck = document.getElementById("generar");
     generardeck.addEventListener("click", function() {
         let deck = document.getElementById("OP01_Zoro_Deck");
         deck.classList.add("revelar");
+        let lider = document.getElementById("lider");
+        lider.classList.add("revelar");
         generardeck.classList.add("ocultar");
         let copiar = document.getElementById("Copiar_Zoro_OP01_Deck");
         copiar.classList.add("revelar");
