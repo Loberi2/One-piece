@@ -1,0 +1,10 @@
+.imagen {
+    width: 200px;
+    height: 300px;
+    border-radius: 8px;
+}
+#contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}

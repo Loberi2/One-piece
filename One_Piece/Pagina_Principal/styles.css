@@ -1,0 +1,80 @@
+/* Estilos para la tabla de decks */
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    font-family: Arial, sans-serif;
+
+}
+
+.tabla th, .tabla td {
+    padding: 10px;
+}
+
+.tabla tr {
+    border-bottom: 1px solid #ccc;
+}
+
+.tabla th {
+    background: #ddd;
+    text-align: center;
+}
+
+/* Celda de los colores */
+.color-celda {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/*Celda de lider*/
+.lider {
+    text-align: center;
+}
+
+/* Circulitos de color */
+.color-box {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+}
+
+.rojo { background: #ff4d4d; }
+.azul { background: #4d79ff; }
+.verde { background: #4dff4d; }
+.morado { background: #b84dff; }
+.amarillo { background: #ffe44d; }
+.negro { background: #333; }
+
+.intentos {
+    background: #c8f7c5;
+    font-weight: bold;
+    text-align: center;
+}
+.baneados {
+      background: #ffb2b2;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+/* Estilos para Decks */
+.ocultar { display: none; }
+
+.revelar { display: block; }
+
+#imagen_oculta {
+    position: fixed;
+    pointer-events: none;
+    display: none;
+    z-index: 9999;
+}
+#imagen_oculta img {
+    width: 150px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transform: translate(-50%, -100%);
+}
+#imagen_oculta.abajo img {
+    transform: translate(-50%, 0%) !important;
+}
